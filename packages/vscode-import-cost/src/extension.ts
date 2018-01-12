@@ -1,8 +1,9 @@
 import {importCost, cleanup, JAVASCRIPT, TYPESCRIPT} from 'import-cost';
 import {ExtensionContext, window, workspace} from 'vscode';
 import {calculated, flushDecorations} from './decorator';
-import logger from './logger';
+import {Logger} from './logger';
 
+const logger = new Logger();
 export function activate(context: ExtensionContext) {
   try {
     logger.init(context);

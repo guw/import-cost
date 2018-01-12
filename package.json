@@ -3,7 +3,8 @@
   "scripts": {
     "precommit": "lerna run precommit",
     "postinstall": "lerna bootstrap --loglevel verbose",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "build": "lerna run build --concurrency 1"
   },
   "devDependencies": {
     "husky": "^0.14.3",

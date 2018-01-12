@@ -1,6 +1,6 @@
 import {OutputChannel, ExtensionContext, window} from 'vscode';
 
-class Logger {
+export class Logger {
   private channel: OutputChannel;
   private context: ExtensionContext;
   private debug: boolean = false;
@@ -19,5 +19,3 @@ class Logger {
     }
   }
 }
-
-export default new Logger();

@@ -1,0 +1,57 @@
+{
+  "name": "vscode-sample-with-dependency",
+  "displayName": "Test Extension with Dependency",
+  "description": "Just for testing",
+  "license": "MIT",
+  "version": "1.0.0",
+  "publisher": "doesntmatter",
+  "engines": {
+    "vscode": "^1.12.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "keywords": [
+    "test"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+  },
+  "scripts": {
+    "vscode:prepublish": "tslint {src,test}/**/*.ts && tsc -p ./",
+    "compile": "tslint {src,test}/**/*.ts && tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "pretest": "npm run vscode:prepublish",
+    "precommit": "npm run vscode:prepublish",
+    "prebublish": "npm run vscode:prepublish",
+    "test": "node ./node_modules/vscode/bin/test",
+    "build": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "husky": "^0.14.3",
+    "mocha": "^2.3.3",
+    "tslint": "^5.5.0",
+    "tslint-config-wix": "^1.0.25",
+    "typescript": "^2.4.1",
+    "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "filesize": "^3.5.10",
+    "import-cost": "^1.0.2",
+    "vscode-import-cost": "2.6.0"
+  },
+  "galleryBanner": {
+    "color": "#1C78C0",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/guw/import-cost",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guw/import-cost.git"
+  }
+}
